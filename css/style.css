@@ -13,3 +13,17 @@ h1 {
     padding: 5px;
     margin: auto 5vw;
 }
+
+img {
+
+    height: 150px;
+    width: 150px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 1px solid white;
+    gap: 5px;
+}
