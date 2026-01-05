@@ -9,29 +9,37 @@
 </head>
 
 <body onload="onInit()">
-    <h1>MeMe GeNeRaToR</h1>
-    <div class="canvas-container">
-        <canvas height="400" width="400" ></canvas>
+    <header>
 
+        <h1>MeMe GeNeRaToR</h1>
+        <nav>
+            <ul>Gallery</ul>
+            <ul>Editor</ul>
+            <ul>About</ul>
+        </nav>
+    </header>
+    <div  class="canvas-container">
+        <h3>Make a MEME</h3>
+        <canvas height="400" width="400"></canvas>
+        <button onclick="clearCanvas()">Clear Canvas</button>
     </div>
 
-    <section class="gallery">
-        <img src="meme-imgs/meme-imgs (square)/1.jpg" alt="">
-        <img src="meme-imgs/meme-imgs (square)/2.jpg" alt="">
-        <img src="meme-imgs/meme-imgs (square)/3.jpg" alt="">
-        <img src="meme-imgs/meme-imgs (square)/4.jpg" alt="">
-        <img src="meme-imgs/meme-imgs (square)/5.jpg" alt="">
-        <img src="meme-imgs/meme-imgs (square)/6.jpg" alt="">
-        <img src="meme-imgs/meme-imgs (square)/7.jpg" alt="">
-        <img src="meme-imgs/meme-imgs (square)/8.jpg" alt="">
-
-    </section>
     <section class="editor">
+        <input type="text" placeholder="Enter top text" name="top text" id="top-text-input">
+        <input type="text" placeholder="Enter bottom text" name="bottom text" id="bottom-text-input">
+        <input type="color" name="choose a color" id="color-btn">
+    </section>
+    <section class="gallery">
+        <img src="meme-imgs/meme-imgs (square)/1.jpg" onclick="onSelectImg(this.src)" alt="">
+        <img src="meme-imgs/meme-imgs (square)/2.jpg" onclick="onSelectImg(this.src)" alt="">
+        <img src="meme-imgs/meme-imgs (square)/3.jpg" onclick="onSelectImg(this.src)" alt="">
 
     </section>
 
     <script src="js/main.js"></script>
+    <script src="js/utils.js"></script>
     <script src="js/meme-controller.js"></script>
+    <script src="js/gallery-controller.js"></script>
 </body>
 
 </html>
