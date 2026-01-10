@@ -10,7 +10,7 @@
 
 <body onload="init()">
     <header>
-        <h1>Meme Generator</h1>
+        <h1 onclick="returnHome()">Meme Generator</h1>
         <nav>
             <ul onclick="showGallery()">Gallery</ul>
             <ul onclick="showEditor()">Editor</ul>
@@ -32,10 +32,13 @@
         <div class="controls">
             <input type="text" id="text-input" placeholder="Enter meme text" oninput="onTextChange()">
 
-            <input type="color" id="color-picker" value="#ffffff"  onchange="onColorChange()">
+            <input type="color" id="color-picker" value="#ffffff" onchange="onColorChange()">
 
             <button onclick="changeFontSize(-5)">A-</button>
             <button onclick="changeFontSize(5)">A+</button>
+
+            <button onclick="addLine()">+ Add Line</button>
+            <button onclick="switchLine()">↔ Switch Line</button>
 
             <a id="download-link" href="#" download="my-meme.png">Download Meme</a>
         </div>

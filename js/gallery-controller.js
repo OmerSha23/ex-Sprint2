@@ -15,6 +15,11 @@ function onImgSelect(imgId) {
     document.getElementById('editor').classList.remove('hidden')
     renderMeme()
 }
+
+function returnHome(){
+    showGallery()
+}
+
 function showGallery() {
     document.getElementById('gallery').classList.remove('hidden')
     document.getElementById('editor').classList.add('hidden')
