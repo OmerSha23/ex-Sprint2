@@ -4,42 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
     <link rel="stylesheet" href="css/style.css">
-    <title>Best Meme Generator</title>
 </head>
 
-<body onload="onInit()">
+<body onload="init()">
     <header>
-
-        <h1>MeMe GeNeRaToR</h1>
+        <h1>Meme Generator</h1>
         <nav>
-            <ul>Gallery</ul>
-            <ul>Editor</ul>
+            <ul onclick="showGallery()">Gallery</ul>
+            <ul onclick="showEditor()">Editor</ul>
             <ul>About</ul>
         </nav>
+
     </header>
-    <div  class="canvas-container">
-        <h3>Make a MEME</h3>
-        <canvas height="400" width="400"></canvas>
-        <button onclick="clearCanvas()">Clear Canvas</button>
-    </div>
 
-    <section class="editor">
-        <input type="text" placeholder="Enter top text" name="top text" id="top-text-input">
-        <input type="text" placeholder="Enter bottom text" name="bottom text" id="bottom-text-input">
-        <input type="color" name="choose a color" id="color-btn">
+    <section id="gallery" class="gallery">
+        <h2>Image Gallery</h2>
+        <div class="images"></div>
     </section>
-    <section class="gallery">
-        <img src="meme-imgs/meme-imgs (square)/1.jpg" onclick="onSelectImg(this.src)" alt="">
-        <img src="meme-imgs/meme-imgs (square)/2.jpg" onclick="onSelectImg(this.src)" alt="">
-        <img src="meme-imgs/meme-imgs (square)/3.jpg" onclick="onSelectImg(this.src)" alt="">
 
+    <section id="editor" class="editor hidden">
+        <h2>Meme Editor</h2>
+        <canvas id="meme-canvas" width="500" height="500"></canvas>
+        <input type="text" id="text-input" placeholder="Enter text" oninput="onTextChange()">
+        <input type="color" id="color-picker" onchange="onColorChange()">
+        <a id="download-link" href="#" download="meme.png">Download Meme</a>
     </section>
 
     <script src="js/main.js"></script>
-    <script src="js/utils.js"></script>
-    <script src="js/meme-controller.js"></script>
     <script src="js/gallery-controller.js"></script>
+    <script src="js/meme-controller.js"></script>
+    <script src="js/utils.js"></script>
 </body>
 
 </html>
