@@ -35,4 +35,8 @@ function setLineTxt(txt) {
     gMeme.lines[gMeme.selectedLineIdx].txt = txt
 }
 
-
+function changeFontSize(fontSize) {
+    const line = gMeme.lines[gMeme.selectedLineIdx]
+    line.size = Math.max(10, (line.size || 40) + fontSize)
+    renderMeme()
+}

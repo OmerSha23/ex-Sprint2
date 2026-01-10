@@ -26,12 +26,20 @@
 
     <section id="editor" class="editor hidden">
         <h2>Meme Editor</h2>
-        <canvas id="meme-canvas" width="500" height="500"></canvas>
-        <input type="text" id="text-input" placeholder="Enter text" oninput="onTextChange()">
-        <input type="color" id="color-picker" onchange="onColorChange()">
-        <a id="download-link" href="#" download="meme.png">Download Meme</a>
-    </section>
 
+        <canvas id="meme-canvas" width="500" height="500"></canvas>
+
+        <div class="controls">
+            <input type="text" id="text-input" placeholder="Enter meme text" oninput="onTextChange()">
+
+            <input type="color" id="color-picker" value="#ffffff"  onchange="onColorChange()">
+
+            <button onclick="changeFontSize(-5)">A-</button>
+            <button onclick="changeFontSize(5)">A+</button>
+
+            <a id="download-link" href="#" download="my-meme.png">Download Meme</a>
+        </div>
+    </section>
     <script src="js/main.js"></script>
     <script src="js/gallery-controller.js"></script>
     <script src="js/meme-controller.js"></script>

@@ -72,12 +72,6 @@ header {
         margin: 1vw auto;
         max-width: fit-content;
     }
-    >a{
-        color:rgb(4, 101, 199);
-    }
-    >a:hover{
-        color: dodgerblue;
-    }
 }
 
 .images {
@@ -107,19 +101,66 @@ input {
 .hidden {
     display: none;
 }
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 10px;
+    >a{
+        color: rgb(0, 98, 196);
+        align-self: center;
+    }
+    >a:hover{
+        color: dodgerblue;
+    }
+}
+
+.controls input[type="text"] {
+    flex: 1 1 ;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.controls button {
+    padding: 5px 8px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #444444a5;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+}
+
+.controls button:hover {
+    background: #666;
+}
+
+.color-btn {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    font-weight: bold;
+}
+
 
 @media (max-width: 768px) {
     canvas {
         width: 100%;
         height: auto;
     }
-
     .images {
         grid-template-columns: 1fr;
     }
-
     nav ul {
         width: 100%;
         margin: 5px 0;
     }
+    .controls {
+        flex-direction: column;
+        align-items: start;
+    }
+    
+    .controls input[type="text"] {
+        width: 100%;
+    }
 }
+

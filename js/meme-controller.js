@@ -13,13 +13,14 @@ function renderMeme() {
 }
 
 function drawText(text, x, y, size, color) {
-    gCtx.lineWidth = 2;
+    gCtx.lineWidth = size / 10;
     gCtx.strokeStyle = 'black'
     gCtx.fillStyle = color
     gCtx.font = `${size}px Impact`
     gCtx.textAlign = 'center'
-    gCtx.fillText(text, x, y)
-    gCtx.strokeText(text, x, y)
+
+    gCtx.strokeText(text.toUpperCase(), x, y);
+    gCtx.fillText(text.toUpperCase(), x, y);
 }
 
 function onTextChange() {
@@ -29,9 +30,9 @@ function onTextChange() {
 }
 
 function onColorChange() {
-    const color = document.getElementById('color-picker').value
-    gMeme.lines[0].color = color
-    renderMeme()
+    const color = document.getElementById('color-picker').value;
+    gMeme.lines[gMeme.selectedLineIdx].color = color;
+    renderMeme();
 }
 
 function updateDownloadLink() {
