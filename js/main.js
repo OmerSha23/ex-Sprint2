@@ -6,12 +6,12 @@ let gIsDragging = false
 let gDraggedLineIdx = -1
 
 let gImgs = [
-    { id: 1, url: '/meme-imgs/meme-imgs (square)/1.jpg', keywords: ['funny', 'cat'] },
-    { id: 2, url: '/meme-imgs/meme-imgs (square)/2.jpg', keywords: ['happy', 'dog'] },
-    { id: 3, url: '/meme-imgs/meme-imgs (square)/3.jpg', keywords: ['happy', 'dog'] },
-    { id: 4, url: '/meme-imgs/meme-imgs (square)/4.jpg', keywords: ['happy', 'dog'] },
-    { id: 5, url: '/meme-imgs/meme-imgs (square)/5.jpg', keywords: ['happy', 'dog'] },
-    { id: 6, url: '/meme-imgs/meme-imgs (square)/6.jpg', keywords: ['happy', 'dog'] },
+    { id: 1, url: 'meme-imgs/meme-imgs (square)/1.jpg', keywords: ['funny', 'cat'] },
+    { id: 2, url: 'meme-imgs/meme-imgs (square)/2.jpg', keywords: ['happy', 'dog'] },
+    { id: 3, url: 'meme-imgs/meme-imgs (square)/3.jpg', keywords: ['happy', 'dog'] },
+    { id: 4, url: 'meme-imgs/meme-imgs (square)/4.jpg', keywords: ['happy', 'dog'] },
+    { id: 5, url: 'meme-imgs/meme-imgs (square)/5.jpg', keywords: ['happy', 'dog'] },
+    { id: 6, url: 'meme-imgs/meme-imgs (square)/6.jpg', keywords: ['happy', 'dog'] },
 ]
 let gMeme = {
     selectedImgId: null,

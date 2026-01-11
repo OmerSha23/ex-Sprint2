@@ -1,12 +1,12 @@
 'use strict'
 
 function renderGallery() {
-    const elImages = document.querySelector('.images')
+    const elImg = document.querySelector('.images')
     let strHtml = ''
     gImgs.forEach(img => {
         strHtml += `<img src="${img.url}" alt="Meme Image" onclick="onImgSelect(${img.id})">`
     })
-    elImages.innerHTML = strHtml
+    elImg.innerHTML = strHtml
 }
 
 function onImgSelect(imgId) {
