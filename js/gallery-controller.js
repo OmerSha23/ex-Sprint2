@@ -13,6 +13,7 @@ function onImgSelect(imgId) {
     setImg(imgId)
     document.getElementById('gallery').classList.add('hidden')
     document.getElementById('editor').classList.remove('hidden')
+    
     renderMeme()
 }
 

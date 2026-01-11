@@ -12,6 +12,7 @@ let gImgs = [
     { id: 4, url: 'meme-imgs/meme-imgs (square)/4.jpg', keywords: ['happy', 'dog'] },
     { id: 5, url: 'meme-imgs/meme-imgs (square)/5.jpg', keywords: ['happy', 'dog'] },
     { id: 6, url: 'meme-imgs/meme-imgs (square)/6.jpg', keywords: ['happy', 'dog'] },
+    { id: 7, url: 'meme-imgs/meme-imgs (various aspect ratios)/putin.jpg', keywords: ['happy', 'dog'] },
 ]
 let gMeme = {
     selectedImgId: null,
